@@ -1,0 +1,13 @@
+{
+  "name": "asm-inc-premium-static",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sitio corporativo estático de ASM Inc., sin dependencias de ejecución ni backend",
+  "scripts": {
+    "build": "node --experimental-strip-types scripts/build.mjs",
+    "dev": "node --experimental-strip-types scripts/build.mjs && python3 -m http.server 4173 --directory dist",
+    "test": "node --experimental-strip-types scripts/verify.mjs"
+  },
+  "engines": { "node": ">=22.10.0" }
+}
