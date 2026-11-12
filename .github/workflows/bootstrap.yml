@@ -22,7 +22,7 @@ jobs:
           cat .transfer/part*.bin > /tmp/asm-source.zip
           echo '2ec11c36b1ddb7f2e5bc5aeb3a28af9f3df7a217c7b52f18a1ea484bfac05643  /tmp/asm-source.zip' | sha256sum --check --status
           unzip -tq /tmp/asm-source.zip
-          unzip -q /tmp/asm-source.zip -d .
+          unzip -oq /tmp/asm-source.zip -d .
           test -f package.json
           test -f scripts/build.mjs
           test -f .github/workflows/deploy.yml
